@@ -19,7 +19,7 @@ Basically, there are two ways prove this equation: by using **trigonometry** or 
 
 ![trigonometry](img/newton-method-geometry.png)
 
-As we can see above, we have a quadratic function $f(x)$ which intersect the x-axis at point $x_0$. We can then take the derivative of $f(x)$ and get $f'(x)$. Suppose we start from some point $x_n$ and draw a tangent line at $x_n$ and intersect the x-axis at $x_{n+1}$ forming an angle of $\theta$ with the axis. Here we can see that we are mucher closer to our target $x_0$. Then, we simply repeat the same procedure to get closer and closer to the target.
+As we can see above, we have a quadratic function $f(x)$ which intersect the x-axis at point $x_0$. We can then take the derivative of $f(x)$ and get $f'(x)$. Suppose we start from some point $x_n$ and draw a tangent line at $x_n$ and intersect the x-axis at $x_{n+1}$ forming an angle of $ \theta $ with the axis. Here we can see that we are mucher closer to our target $x_0$. Then, we simply repeat the same procedure to get closer and closer to the target.
 
 You may ask how can we obtain the value of $x_{n+1}$. It is very simple by using trigonometry. We can clearly see there is a right triangle constructed by the tangent line, so we will have:
 
