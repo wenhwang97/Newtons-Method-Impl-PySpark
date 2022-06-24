@@ -40,3 +40,38 @@ $$
 which is exactly the formula of Newton Raphson Method.
 
 ## Taylor Series Approach
+
+The idea of Taylor Series is to find an estimate of a function. It is an infinite sum of terms that are expressed in the terms of derivatives of a function at a single point. The equation of the Taylor Series is expressed as below:
+
+$$
+f(x)=\sum_{i=0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n
+$$
+
+If we expand the expression above, we have:
+
+$$
+f(x)=f(c) + f'(c)(x-c) + \frac{f''(c)}{2!}(x-c)^2 + \frac{f'''(c)}{3!}(x-c)^3 + \cdots
+$$
+
+In our case, we are looking for the point $x_0$ where $f(x_0)=0$ starting from some point at $x_n$. We can then re-write the series to:
+
+$$
+\begin{align}
+f(x_0) &= f(x_n) + f'(x_n)(x_0-x_n) + \frac{f''(x_n)}{2!}(x_0-x_n)^2 + \frac{f'''(x_n)}{3!}(x_0-x_n)^3 + \cdots \\
+0 &= f(x_n) + f'(x_n)(x_0-x_n) + \frac{f''(x_n)}{2!}(x_0-x_n)^2 + \frac{f'''(x_n)}{3!}(x_0-x_n)^3 + \cdots
+\end{align}
+$$
+
+However, it is not possible for us to calculate the entire series. Only a portion of the series will give us a rough estimated point $x_{n+1}$ which is step closer to the actual **zero** at $x_0$. Thus, by omitting most part of the series, we have:
+
+$$
+\begin{align}
+0 &\approx f(x_n) + f'(x_n)(x_0-x_n) \\
+0 &= f(x_n) + f'(x_n)(x_{n+1}-x_n) \\
+ -f'(x_n)(x_{n+1}-x_n) &= f(x_n) \\
+ x_{n+1}-x_n &= -\frac{f(x_n)}{f'(x_n)} \\
+ x_{n+1}&= x_n  -\frac{f(x_n)}{f'(x_n)} \\
+\end{align}
+$$
+
+which is the same as the formula of Newton Raphson Method.
